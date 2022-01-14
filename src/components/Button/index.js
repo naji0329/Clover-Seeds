@@ -1,26 +1,30 @@
 import React from "react";
 import Box from "@mui/material/Box";
-const Button = ({ title, backgroundColor }) => {
+import { Link } from "react-router-dom";
+const Button = ({ title, backgroundColor, url }) => {
   return (
     <Box>
-      <Box
-        sx={{
+      <Link
+        to={url}
+        style={{
           display: "flex",
           justifyContent: "center",
+          alignItems:"center",
           width: "100%",
-          color:"#FFFFFF",
+          height:"55px",
+          color: "#FFFFFF",
           backgroundColor: backgroundColor,
           borderRadius: "6px",
-          paddingY: "16px",
           fontSize: "28px",
-          cursor:"pointer",
+          cursor: "pointer",
           textTransform: "uppercase",
-          fontWeight: "800",
+          fontWeight: "700",
           fontFamily: `Maven Pro, sans-serif`,
+          textDecoration: "none",
         }}
       >
-        <a>{title}</a>
-      </Box>
+        {title}
+      </Link>
     </Box>
   );
 };

@@ -1,19 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Redirect, Routes } from "react-router-dom";
-import Header from "./components/Header";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/Home";
+import MyLand from "./pages/MyLand";
+import MyNFT from "./pages/MyNFT";
 
-import Staking from "./components/Staking";
-import Mint from "./components/Mint";
-
-function App(props) {
-  // const dispatch = useDispatch()
-
-  useEffect(async () => {}, []);
-
+function App() {
   return (
-    <div>
-      <Header />
-     
+    <div className="wrapper">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/my-nft" element={<MyNFT />} />
+        <Route path="/my-land" element={<MyLand />} />
+      </Routes>
     </div>
   );
 }

@@ -1,11 +1,27 @@
-import React from 'react'
+import React from "react";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import Menu from "../Menu";
+import Footer from "../Footer";
+import Header from "./Header";
+import Cards from "./Cards";
+const Mint = () => {
+  return (
+    <div>
+      <Menu title="Home"/>
+      <Container maxWidth="lg">
+        <Header />
+        <Cards />
+      </Container>
+      <Box
+        sx={{
+          paddingY: "40px",
+        }}
+      >
+        <Footer />
+      </Box>
+    </div>
+  );
+};
 
-const Index = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
-
-export default Index
+export default Mint;

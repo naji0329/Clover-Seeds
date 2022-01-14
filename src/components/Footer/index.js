@@ -12,13 +12,12 @@ const Title = styled("h1")({
   textAlign: "center",
   textTransform: "uppercase",
   color: `#FFFFFF`,
-  paddingRight:"40px"
 });
 const EnsureText = styled("h1")({
   fontFamily: `Maven Pro, sans-serif`,
   fontStyle: `normal`,
   fontWeight: `600`,
-  fontSize: `14px`,
+  fontSize: `12px`,
   lineHeight: `22px`,
   textAlign: "center",
   textTransform: "uppercase",
@@ -32,12 +31,7 @@ const Footer = () => {
   return (
     <Box>
       <Container maxWidth="xl">
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "flex-end",
-          }}
-        >
+        <Box>
           <Box
             sx={{
               display: "flex",
@@ -51,6 +45,11 @@ const Footer = () => {
             sx={{
               display: "flex",
               justifyContent: "flex-end",
+              marginTop: "-24px",
+              "@media (max-width: 1140px)": {
+                marginTop: "20px",
+                justifyContent: "center",
+              },
             }}
           >
             <Box
@@ -58,10 +57,13 @@ const Footer = () => {
                 backgroundColor: "#0f231a",
                 paddingTop: "5px",
                 paddingBottom: "10px",
-                paddingX: "40px",
+                paddingX: "20px",
                 display: "flex",
                 alignSelf: "center",
                 borderRadius: "5px",
+                "@media (max-width: 1140px)": {
+                  paddingX: "10px",
+                },
               }}
             >
               <EnsureText>

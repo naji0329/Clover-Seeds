@@ -9,7 +9,9 @@
   font-family: Azonix;
   src: url("../src/static/fonts/Azonix.otf") format("opentype");
 }
-
+a{
+  text-decoration: none;
+}
 .maven {
   font-family: "Maven Pro", sans-serif;
 }
@@ -19,4 +21,13 @@
 
 body {
   font-family: "Maven Pro", sans-serif;
+}
+
+.wrapper {
+  background-image: url("../src/static/images/BACKGROUND\ DAPP\ CS\ 2022.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
 }
