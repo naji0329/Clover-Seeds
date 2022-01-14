@@ -44,29 +44,31 @@ const MobileMenu = () => {
         sx={{
           display: "flex",
           alignSelf: "center",
-          marginTop:"50px",
-          marginBottom:"20px"
+          marginTop: "50px",
+          marginBottom: "20px",
         }}
       >
-        <Box
-          sx={{
-            color: "#fff",
-            fontSize: "16px",
-            textTransform: "uppercase",
-            fontFamily: "Azonix",
-            paddingTop: "15px",
-            paddingBottom: "11px",
-            borderRadius: "4px",
-            paddingX: "20px",
-            width: "100%",
-            marginX: "10px",
-            textAlign: "center",
-            border: `2px solid #00B951`,
-            cursor: "pointer",
-          }}
-        >
-          HOME
-        </Box>
+        <Link to="/">
+          <Box
+            sx={{
+              color: "#fff",
+              fontSize: "16px",
+              textTransform: "uppercase",
+              fontFamily: "Azonix",
+              paddingTop: "15px",
+              paddingBottom: "11px",
+              borderRadius: "4px",
+              paddingX: "20px",
+              width: "100%",
+              marginX: "10px",
+              textAlign: "center",
+              border: `2px solid #00B951`,
+              cursor: "pointer",
+            }}
+          >
+            HOME
+          </Box>
+        </Link>
       </Box>
       <Box
         sx={{
