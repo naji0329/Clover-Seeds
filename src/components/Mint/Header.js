@@ -84,7 +84,7 @@ const Header = () => {
                 },
               }}
             >
-              <Button title="PacncakeSwap" icon={pancakeLogo} />
+              <Button title="Pancakeswap" icon={pancakeLogo} />
               <Box
                 sx={{
                   fontFamily: `Maven Pro, sans-serif`,
