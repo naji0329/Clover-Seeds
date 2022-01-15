@@ -5,16 +5,9 @@ import Marketplace from "../../static/images/image-111.jpg";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
-
-import PropTypes from "prop-types";
-import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
-
-import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
-
 import ProgresModal from "../Modals/ProgresModal";
 import WinModal from "../Modals/WinModal";
+
 
 const Title = styled("h1")({
   fontFamily: `Maven Pro, sans-serif`,

@@ -66,6 +66,10 @@ button {
   margin: auto;
   text-decoration: none;
 }
+.input-number{
+  max-width: 90px;
+  padding: 12px 10px;
+}
 
 @media screen and (max-width: 610px) {
 
