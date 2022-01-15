@@ -25,6 +25,31 @@ const Title = styled("h1")({
     lineHeight: `40px`,
   },
 });
+const TipText = styled("h1")({
+  fontFamily: `Maven Pro, sans-serif`,
+  fontStyle: `normal`,
+  fontWeight: `700`,
+  fontSize: `18px`,
+  lineHeight: `24px`,
+  textAlign: "center",
+  textTransform: "uppercase",
+  paddingTop: "15px",
+});
+const WhitePaperBtn = styled("a")({
+  fontFamily: `Maven Pro, sans-serif`,
+  fontStyle: `normal`,
+  fontWeight: `600`,
+  fontSize: `22px`,
+  lineHeight: `26px`,
+  textAlign: "center",
+  textTransform: "uppercase",
+  border: "2px solid #00a65a",
+  color: `#FFFFFF`,
+  backgroundColor: "transparent",
+  padding: "12px 40px",
+  display: "block",
+  borderRadius: "8px",
+});
 const Welcome = () => {
   return (
     <Box
@@ -46,7 +71,8 @@ const Welcome = () => {
                     borderRadius: "8px",
                     border: `3px solid ${item.color}`,
                     boxShadow: `0px 0px 16px ${item.color}`,
-                    paddingY: "40px",
+                    paddingTop: "90px",
+                    paddingBottom: "30px",
                     paddingX: "20px",
                   }}
                 >
@@ -57,7 +83,7 @@ const Welcome = () => {
                       maxWidth: "120px",
                       height: "120px",
                       marginX: "auto",
-                      marginBottom: "140px",
+                      marginBottom: "100px",
                       "@media (max-width: 600px)": {
                         marginBottom: "60px",
                       },
@@ -71,12 +97,29 @@ const Welcome = () => {
                       backgroundColor={item.color}
                       url={item.url}
                     />
+                    <TipText
+                      sx={{
+                        color: item.color,
+                        height:"20px"
+                      }}
+                    >
+                      {item.title}
+                    </TipText>
                   </Box>
                 </Box>
               </Grid>
             );
           })}
         </Grid>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "60px",
+          }}
+        >
+          <WhitePaperBtn>WHITEPAPER</WhitePaperBtn>
+        </Box>
       </Box>
     </Box>
   );
@@ -87,14 +130,14 @@ export default Welcome;
 const data = [
   {
     picture: SeedDaap,
-    title: "mint",
+    title: "(mint)",
     buttonText: "My NFT",
     url: "/my-nft",
     color: "#c1d117",
   },
   {
     picture: Farm,
-    title: "stake & earn",
+    title: "(stake & earn)",
     buttonText: "My LAND",
     url: "/my-land",
     color: "#00a65a",

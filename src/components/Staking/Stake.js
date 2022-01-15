@@ -33,7 +33,7 @@ const StatTitle = styled("h1")({
   color: `#c1d117`,
   paddingBottom: "18px",
 });
-const Land = () => {
+const Stake = () => {
   return (
     <Box
       sx={{
@@ -227,11 +227,15 @@ const Land = () => {
                         fontSize: "14px",
                         fontWeight: "600",
                         textAlign: "center",
-                        maxWidth:"100px",
+                        maxWidth: "100px",
                         minWidth: "80px",
+                        "& > span": {
+                          color: `#FFFFFF`,
+                        },
                       }}
                     >
-                      {item.minted}
+                      {item.minted}<br />
+                      <span>{item.mintedSlash}</span>
                     </Box>
                   </Box>
                   <Box>
@@ -240,7 +244,7 @@ const Land = () => {
                         backgroundColor: "#c1d117",
                         color: "#fff",
                         minWidth: "80px",
-                        maxWidth:"120px",
+                        maxWidth: "120px",
                         paddingX: "7px",
                         paddingY: "15px",
                         textTransform: "uppercase",
@@ -263,6 +267,8 @@ const Land = () => {
               display: "flex",
               justifyContent: "center",
               marginY: "20px",
+              maxWidth:"200px",
+              marginX:"auto"
             }}
           >
             <Box
@@ -299,7 +305,7 @@ const Land = () => {
   );
 };
 
-export default Land;
+export default Stake;
 
 const Landdata = [
   {
@@ -397,19 +403,22 @@ const statsData = [
   {
     title: `CLOVER `,
     subTitle: "FIELD",
-    minted: "2500 /30,000",
+    minted: "2500",
+    mintedSlash: "/30,000",
     stacked: "2250",
   },
   {
     title: "CLOVER",
     subTitle: "YARD",
-    minted: "25,000 /30,000",
+    minted: "25,000",
+    mintedSlash: "/30,000",
     stacked: "22,500",
   },
   {
     title: "CLOVER",
     subTitle: "PORT",
-    minted: "250,000 /300,000",
+    minted: "250,000 ",
+    mintedSlash: "/300,000",
     stacked: "225,000",
   },
 ];
@@ -423,7 +432,7 @@ const Button = ({ color, title }) => {
         alignItems: "center",
         width: "100%",
         height: "55px",
-        color: color,
+        color: "#fff",
         border: `3px solid ${color}`,
         boxShadow: `0px 0px 18px ${color}`,
         borderRadius: "6px",

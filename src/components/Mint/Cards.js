@@ -9,48 +9,12 @@ import { styled } from "@mui/material/styles";
 import PropTypes from "prop-types";
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
-import DialogContent from "@mui/material/DialogContent";
+
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import reward from "../../static/images/imageedit_1_5731477485.png";
 
-const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-  "& .MuiDialogContent-root": {
-    padding: theme.spacing(2),
-  },
-  "& .MuiDialogActions-root": {
-    padding: theme.spacing(1),
-  },
-}));
-
-const BootstrapDialogTitle = (props) => {
-  const { children, onClose, ...other } = props;
-
-  return (
-    <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
-      {children}
-      {onClose ? (
-        <IconButton
-          aria-label="close"
-          onClick={onClose}
-          sx={{
-            position: "absolute",
-            right: 8,
-            top: 8,
-            color: (theme) => theme.palette.grey[500],
-          }}
-        >
-          <CloseIcon />
-        </IconButton>
-      ) : null}
-    </DialogTitle>
-  );
-};
-
-BootstrapDialogTitle.propTypes = {
-  children: PropTypes.node,
-  onClose: PropTypes.func.isRequired,
-};
+import ProgresModal from "../Modals/ProgresModal";
+import WinModal from "../Modals/WinModal";
 
 const Title = styled("h1")({
   fontFamily: `Maven Pro, sans-serif`,
@@ -64,30 +28,27 @@ const Title = styled("h1")({
   color: `#FFFFFF`,
 });
 
-const MinTitle = styled("h1")({
-  fontFamily: `Maven Pro, sans-serif`,
-  fontStyle: `normal`,
-  fontWeight: `700`,
-  fontSize: `30px`,
-  lineHeight: `38px`,
-  textAlign: "center",
-  textTransform: "uppercase",
-  paddingBottom: "20px",
-  color: `#FFFFFF`,
-});
-const LuckyImage = styled("img")({
-  width: "300px",
-});
-
 const Cards = () => {
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
+  // Progress Modal Handlers
+  const [openProgressModal, setOpen] = React.useState(false);
+  const handleProgressModal = () => {
     setOpen(true);
   };
-  const handleClose = () => {
+  const progressCloseModal = () => {
     setOpen(false);
+    handleClickWinModal();
   };
+
+  // WinModal Modal Handlers
+  const [openWinModal, setopenWinModal] = React.useState(false);
+  const handleClickWinModal = () => {
+    setopenWinModal(true);
+  };
+
+  const handleCloseWinModal = () => {
+    setopenWinModal(false);
+  };
+
   return (
     <Box
       sx={{
@@ -157,7 +118,7 @@ const Cards = () => {
                   <Button
                     title={item.buttonText}
                     color={item.color}
-                    handleClickOpen={handleClickOpen}
+                    handleProgressModal={handleProgressModal}
                   />
                 </Box>
                 <Box
@@ -182,36 +143,14 @@ const Cards = () => {
           );
         })}
       </Grid>
-      <BootstrapDialog
-        onClose={handleClose}
-        aria-labelledby="customized-dialog-title"
-        open={open}
-        fullWidth={true}
-        maxWidth="sm"
-      >
-        <BootstrapDialogTitle
-          onClose={handleClose}
-          sx={{
-            backgroundColor: "#10241b",
-          }}
-        />
-        <DialogContent
-          sx={{
-            backgroundColor: "#10241b",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              marginY: "30px",
-            }}
-          >
-            <LuckyImage src={reward} alt="" />
-          </Box>
-          <MinTitle>Mint In Progress...</MinTitle>
-        </DialogContent>
-      </BootstrapDialog>
+      <ProgresModal
+        openProgressModal={openProgressModal}
+        progressCloseModal={progressCloseModal}
+      />
+      <WinModal
+        openWinModal={openWinModal}
+        handleCloseWinModal={handleCloseWinModal}
+      />
     </Box>
   );
 };
@@ -273,10 +212,10 @@ const PercentageButton = ({ color, percent }) => {
   );
 };
 
-const Button = ({ color, title, handleClickOpen }) => {
+const Button = ({ color, title, handleProgressModal }) => {
   return (
     <a
-      onClick={handleClickOpen}
+      onClick={handleProgressModal}
       style={{
         display: "flex",
         justifyContent: "center",

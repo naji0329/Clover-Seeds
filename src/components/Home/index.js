@@ -2,7 +2,7 @@ import React from "react";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Social from "../Social";
-import Welcome from "../Welcome";
+import Welcome from "./Welcome";
 import Footer from "../Footer";
 import Menu from "../Menu";
 
