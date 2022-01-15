@@ -9,28 +9,49 @@ const TabButtons = ({ buttons, changeTab, activeTab }) => {
         display: "flex",
         justifyContent: "space-between",
         paddingBottom: "50px",
+        "@media (max-width: 890px)": {
+          flexDirection: "column",
+          justifyContent: "center",
+        },
       }}
     >
       <MainTitle>MY LAND</MainTitle>
       <Box>
-        <Box sx={{ display: "flex" }}>
-          {buttons.map((button) => {
-            return (
-              <button
-                className={button === activeTab ? "active" : ""}
-                onClick={() => changeTab(button)}
-              >
-                {button}
-              </button>
-            );
-          })}
-          {
-            (activeTab == "STACK - 6" ? (
-              <LandsButton title="SELECT ALL LANDS" />
-            ) : (
-              <LandsButton title="STAKE SELECTED NFT" />
-            ))
-          }
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            "@media (max-width: 560px)": {
+              flexDirection: "column",
+            },
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              "@media (max-width: 560px)": {
+                maxWidth: "300px",
+                marginX: "auto",
+                marginBottom: "30px",
+              },
+            }}
+          >
+            {buttons.map((button) => {
+              return (
+                <button
+                  className={button === activeTab ? "active" : ""}
+                  onClick={() => changeTab(button)}
+                >
+                  {button}
+                </button>
+              );
+            })}
+          </Box>
+          {activeTab == "STACK - 6" ? (
+            <LandsButton title="SELECT ALL LANDS" />
+          ) : (
+            <LandsButton title="STAKE SELECTED NFT" />
+          )}
         </Box>
       </Box>
       <Box sx={{}}></Box>
@@ -55,34 +76,21 @@ const MainTitle = styled("h1")({
     paddingBottom: "30px",
   },
 });
-const Title = styled("h1")({
-  fontFamily: `Maven Pro, sans-serif`,
-  fontStyle: `normal`,
-  fontWeight: `600`,
-  fontSize: `24px`,
-  lineHeight: `32px`,
-  textAlign: "center",
-  textTransform: "uppercase",
-
-  color: `#FFFFFF`,
-  "@media (max-width: 768px)": {
-    fontSize: `18px`,
-    lineHeight: `24px`,
-  },
-});
 
 const LandsButton = ({ title }) => {
   return (
     <Box
       sx={{
         marginLeft: "40px",
-        "@media (max-width: 520px)": {
+        "@media (max-width: 560px)": {
           marginLeft: "0px",
+          maxWidth: "250px",
+          marginX: "auto",
         },
       }}
     >
-      <a
-        style={{
+      <Box
+        sx={{
           display: "flex",
           justifyContent: "center",
 
@@ -102,10 +110,14 @@ const LandsButton = ({ title }) => {
           fontWeight: "700",
           fontFamily: `Maven Pro, sans-serif`,
           textDecoration: "none",
+          "@media (max-width: 610px)": {
+            fontSize: "16px",
+            padding: "0px 15px",
+          },
         }}
       >
         {title}
-      </a>
+      </Box>
     </Box>
   );
 };

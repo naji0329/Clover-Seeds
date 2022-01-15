@@ -66,3 +66,20 @@ button {
   margin: auto;
   text-decoration: none;
 }
+
+@media screen and (max-width: 610px) {
+
+  button {
+    margin-right: 15px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #707176;
+    transition: all ease-in-out 0.2s;
+    /* border-bottom: 2px solid transparent; */
+    font-weight: 700;
+  }
+}
