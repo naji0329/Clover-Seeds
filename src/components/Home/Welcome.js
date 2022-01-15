@@ -49,6 +49,7 @@ const WhitePaperBtn = styled("a")({
   padding: "12px 40px",
   display: "block",
   borderRadius: "8px",
+  cursor:"pointer"
 });
 const Welcome = () => {
   return (
