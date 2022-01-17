@@ -13,7 +13,7 @@ const SocialLogo = styled("img")({
   height: "36px",
   marginLeft: "10px",
   marginRight: "10px",
-  cursor:"pointer"
+  cursor: "pointer",
 });
 const Social = () => {
   return (
@@ -24,15 +24,43 @@ const Social = () => {
       }}
     >
       <Box>
-        <SocialLogo src={Telegram} alt="" />
-        <SocialLogo src={Discord} alt="" />
-        <SocialLogo src={Twitter} alt="" />
-        <SocialLogo src={Youtube} alt="" />
-        <SocialLogo src={Github} alt="" />
-        <SocialLogo src={Medium} alt="" />
+        {socialLinks.map((item, index) => {
+          return (
+            <a href={item.url} target="_blank" key={index}>
+              <SocialLogo src={item.icon} alt="" />
+            </a>
+          );
+        })}
       </Box>
     </Box>
   );
 };
 
 export default Social;
+
+const socialLinks = [
+  {
+    icon: Telegram,
+    url: "https://t.me/CloverSeedsOfficial",
+  },
+  {
+    icon: Discord,
+    url: "https://discord.gg/cloverseedsbsc",
+  },
+  {
+    icon: Twitter,
+    url: "https://twitter.com/CloverSeedsBSC",
+  },
+  {
+    icon: Youtube,
+    url: "https://www.youtube.com/channel/UCwEynYNCIe69WSMj0qimPgg",
+  },
+  {
+    icon: Github,
+    url: "https://clover-seed.gitbook.io/informations/",
+  },
+  {
+    icon: Medium,
+    url: "https://clover-seeds.medium.com/",
+  },
+];

@@ -4,6 +4,7 @@ import HomePage from "./pages/Home";
 import MyLand from "./pages/MyLand";
 import MyNFT from "./pages/MyNFT";
 import VipMint from "./pages/VipMint";
+import Whitepaper from "./pages/Whitepaper";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Route path="/my-nft" element={<MyNFT />} />
         <Route path="/my-land" element={<MyLand />} />
         <Route path="/vip-mint" element={<VipMint />} />
-        
+        <Route path="/whitepaper" element={<Whitepaper />} />
       </Routes>
     </div>
   );

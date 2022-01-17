@@ -70,7 +70,11 @@ button {
   max-width: 90px;
   padding: 12px 10px;
 }
-
+.gradienttext{
+  background: -webkit-linear-gradient(#c1d117, #00a65a, #3c6f66);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 @media screen and (max-width: 610px) {
 
   button {

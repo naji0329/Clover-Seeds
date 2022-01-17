@@ -1,7 +1,7 @@
 import React from "react";
-import SeedDaap from "../../static/images/image-112.jpg";
-import Farm from "../../static/images/image-110.jpg";
-import Marketplace from "../../static/images/image-111.jpg";
+import CLOVERFIELD from "../../static/images/GIF CLOVERFIELD.gif";
+import CLOVERYARD from "../../static/images/GIF CLOVERYARD.gif";
+import CLOVERPOT from "../../static/images/GIF CLOVERPOT.gif";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
@@ -152,7 +152,7 @@ export default Cards;
 
 const data = [
   {
-    picture: SeedDaap,
+    picture: CLOVERFIELD,
     title: "Seed$ daily rewards",
     buttonText: "Mint Cloverfield",
     price: "10,000",
@@ -163,7 +163,7 @@ const data = [
     percentD: "15",
   },
   {
-    picture: Farm,
+    picture: CLOVERYARD,
     title: "Seed$ daily rewards",
     buttonText: "Mint Cloveryard",
     price: "1,000",
@@ -174,9 +174,9 @@ const data = [
     percentD: "6",
   },
   {
-    picture: Marketplace,
+    picture: CLOVERPOT,
     title: "Seed$ daily rewards",
-    buttonText: "Mint Cloverport",
+    buttonText: "Mint CLOVERPOT",
     price: "100",
     color: "#3c6f66",
     percentA: "1",

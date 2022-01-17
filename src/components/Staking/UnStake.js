@@ -335,7 +335,7 @@ const Landdata = [
     ],
   },
   {
-    title: "CLOVERPORT",
+    title: "CLOVERPOT",
     color: "#3c6f66",
     quant: "2",
     data: [
@@ -380,7 +380,7 @@ const statsData = [
   },
   {
     title: "CLOVER",
-    subTitle: "PORT",
+    subTitle: "POT",
     minted: "250,000 ",
     mintedSlash: "/300,000",
     stacked: "225,000",

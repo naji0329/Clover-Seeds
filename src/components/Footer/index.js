@@ -39,7 +39,16 @@ const Footer = () => {
               alignSelf: "center",
             }}
           >
-            <Title>©2022 Copyright CLOVER SEEDS.FINANCIAL</Title>
+            <Title>
+              ©2022 Copyright 
+              <a
+                href="https://clover-seeds.com/"
+                target="_blank"
+                style={{ color: "#fff" }}
+              >
+                 {" "}CLOVER SEEDS.FINANCIAL
+              </a>{" "}
+            </Title>
           </Box>
           <Box
             sx={{
@@ -68,7 +77,7 @@ const Footer = () => {
             >
               <EnsureText>
                 Ensure you are at{" "}
-                <a href="https://app.clover-seeds.financial" target="_blank">
+                <a href="https://clover-seeds.com/" target="_blank">
                   https://app.clover-seeds.financial
                 </a>
               </EnsureText>
