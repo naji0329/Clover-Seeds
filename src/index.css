@@ -66,17 +66,79 @@ button {
   margin: auto;
   text-decoration: none;
 }
-.input-number{
+.input-number {
   max-width: 90px;
   padding: 12px 10px;
 }
-.gradienttext{
+.gradienttext {
   background: -webkit-linear-gradient(#c1d117, #00a65a, #3c6f66);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.collapse {
+  max-height: 0px;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.open {
+  max-height: 500px;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.question-open {
+  background-color: #10241b;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: "center";
+  text-transform: "normal";
+  color: #b9e7d6;
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.question-close {
+  background-color: #10241b;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: "center";
+  text-transform: "normal";
+  color: #b9e7d6;
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.faq-answer {
+  color: #87b79d;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: "center";
+  text-transform: "normal";
+  color: #b9e7d6;
+  display: flex;
+  padding: 0px 20px 40px 40px;
+}
+.faq-q-wrap {
+  position: relative;
+  margin-bottom: 20px;
+}
+.faq-icons {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+.FAQ-ICON {
+  color: #b5d348;;
+  font-size: 20px;
+}
 @media screen and (max-width: 610px) {
-
   button {
     margin-right: 15px;
     font-size: 16px;

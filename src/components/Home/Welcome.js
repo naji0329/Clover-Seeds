@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
 import Button from "../Button";
-
+import { Link } from "react-router-dom";
 const Title = styled("h1")({
   fontFamily: `Maven Pro, sans-serif`,
   fontStyle: `normal`,
@@ -49,14 +49,14 @@ const WhitePaperBtn = styled("a")({
   padding: "12px 40px",
   display: "block",
   borderRadius: "8px",
-  cursor:"pointer"
+  cursor: "pointer",
 });
 const Welcome = () => {
   return (
     <Box
       sx={{
         paddingTop: "40px",
-        paddingBottom:"70px"
+        paddingBottom: "70px",
       }}
     >
       <Title>
@@ -102,7 +102,7 @@ const Welcome = () => {
                     <TipText
                       sx={{
                         color: item.color,
-                        height:"20px"
+                        height: "20px",
                       }}
                     >
                       {item.title}
@@ -120,7 +120,9 @@ const Welcome = () => {
             marginTop: "60px",
           }}
         >
-          <WhitePaperBtn>WHITEPAPER</WhitePaperBtn>
+          <Link to="/whitepaper">
+            <WhitePaperBtn>WHITEPAPER</WhitePaperBtn>
+          </Link>
         </Box>
       </Box>
     </Box>
