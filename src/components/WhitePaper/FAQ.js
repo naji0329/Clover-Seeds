@@ -14,9 +14,8 @@ const Faq = () => {
   };
   return (
     <div>
-      <div className="w-full bg-primary py-20">
-        <div className="container-lg ">
-          <div className=" px-6 py-8  md:px-12 md:py-12 bg-gray">
+      <div style={{marginBottom:"100px"}}>
+        
             <Title
               className="gradienttext"
               sx={{
@@ -641,18 +640,165 @@ const Faq = () => {
                         textAlign: "left",
                       }}
                     >
-                      When a Clover is created: <br />{" "}
-                      <span style={{ color: "#bdd10a", }}>80%</span> SEED$ are
-                      transferred to the rewards pool (in SEED$).
-                      <br />- <span style={{ color: "#bdd10a" }}>15%</span>{" "}
-                      SEED$ are added to the liquidity pool (50% in BNB / 50% in
-                      SEED$).
-                      <br />- <span style={{ color: "#bdd10a" }}>3%</span> SEEDS
-                      are transferred to the marketing wallet to ensure the
-                      stabilization of the whole protocol and the token growth
-                      (BNB).
-                      <br />- <span style={{ color: "#bdd10a" }}>2%</span> SEED$
-                      are transferred to the team wallet (BNB).
+                      When a Clover is created: <br />
+                      <br />{" "}
+                      <span style={{ paddingLeft: "50px" }}>
+                        - <span style={{ color: "#bdd10a" }}>80%</span> SEED$
+                        are transferred to the rewards pool (in SEED$).
+                      </span>
+                      <br />
+                      <span style={{ paddingLeft: "50px" }}>
+                        - <span style={{ color: "#bdd10a" }}>15%</span> SEED$
+                        are added to the liquidity pool (50% in BNB / 50% in
+                        SEED$).
+                      </span>
+                      <br />{" "}
+                      <span style={{ paddingLeft: "50px" }}>
+                        -<span style={{ color: "#bdd10a" }}>3%</span> SEEDS are
+                        transferred to the marketing wallet to ensure the
+                        stabilization of the whole protocol and the token growth
+                        (BNB).
+                      </span>
+                      <br />{" "}
+                      <span style={{ paddingLeft: "50px" }}>
+                        -<span style={{ color: "#bdd10a" }}>2%</span> SEED$ are
+                        transferred to the team wallet (BNB).
+                      </span>
+                    </Paragraph>
+                  </p>
+                </div>
+                <div className="faq-q-wrap" onClick={() => handleCollapse(14)}>
+                  <a
+                    className={`${
+                      open === 14 ? "question-open" : "question-close"
+                    } `}
+                  >
+                    Can I sell my SEED$ when I want?
+                  </a>
+                  <div className="faq-icons">
+                    {open === 14 ? (
+                      <RemoveIcon className="FAQ-ICON" />
+                    ) : (
+                      <AddIcon className="FAQ-ICON" />
+                    )}
+                  </div>
+                </div>
+                <div
+                  className={`${
+                    open === 14 ? "open" : "collapse"
+                  } bg-transparent border-b border-white`}
+                >
+                  <p className="faq-answer">
+                    <Paragraph
+                      sx={{
+                        color: "#b9e7d6",
+                        fontSize: "18px",
+                        lineHeight: "26px",
+
+                        textTransform: "none",
+                        fontWeight: "600",
+                        textAlign: "left",
+                      }}
+                    >
+                      Of course, you can sell your SEED$ token when you want on
+                      Pancakeswap or Poocoin.
+                      <br />
+                      To avoid sandwich-bots and optimize the liquidity pool, a
+                      fee of 5% is collected on each SELLING transactions:{" "}
+                      <br />
+                      <span style={{ paddingLeft: "50px" }}>
+                        - 3% are added to the liquidity pool.
+                      </span>
+                      <br />
+                      <span style={{ paddingLeft: "50px" }}>
+                        - 2% are transferred to the team wallet.
+                      </span>
+                    </Paragraph>
+                  </p>
+                </div>
+                <div className="faq-q-wrap" onClick={() => handleCollapse(15)}>
+                  <a
+                    className={`${
+                      open === 15 ? "question-open" : "question-close"
+                    } `}
+                  >
+                    Why is SEED$ on the Binance Smart Chain?
+                  </a>
+                  <div className="faq-icons">
+                    {open === 15 ? (
+                      <RemoveIcon className="FAQ-ICON" />
+                    ) : (
+                      <AddIcon className="FAQ-ICON" />
+                    )}
+                  </div>
+                </div>
+                <div
+                  className={`${
+                    open === 15 ? "open" : "collapse"
+                  } bg-transparent border-b border-white`}
+                >
+                  <p className="faq-answer">
+                    <Paragraph
+                      sx={{
+                        color: "#b9e7d6",
+                        fontSize: "18px",
+                        lineHeight: "26px",
+
+                        textTransform: "none",
+                        fontWeight: "600",
+                        textAlign: "left",
+                      }}
+                    >
+                      SEED$ is on the Binance Smart Chain for 2 reasons:
+                      <br />
+                      <span style={{ paddingLeft: "50px" }}>
+                        - This is the SmartChain that is most accessible to
+                        everyone. Unlike the Ethereum network where high gas
+                        fees make it impossible for most people to access.
+                      </span>
+                      <br />
+                      <span style={{ paddingLeft: "50px" }}>
+                        - It is the SmartChain that is widely recognized, and
+                        has a very good image and a positive reputation.
+                      </span>
+                    </Paragraph>
+                  </p>
+                </div>
+                <div className="faq-q-wrap" onClick={() => handleCollapse(16)}>
+                  <a
+                    className={`${
+                      open === 16 ? "question-open" : "question-close"
+                    } `}
+                  >
+                    Do you have a tutorial to explain the CLOVER SEED$ concept?
+                  </a>
+                  <div className="faq-icons">
+                    {open === 16 ? (
+                      <RemoveIcon className="FAQ-ICON" />
+                    ) : (
+                      <AddIcon className="FAQ-ICON" />
+                    )}
+                  </div>
+                </div>
+                <div
+                  className={`${
+                    open === 16 ? "open" : "collapse"
+                  } bg-transparent border-b border-white`}
+                >
+                  <p className="faq-answer">
+                    <Paragraph
+                      sx={{
+                        color: "#b9e7d6",
+                        fontSize: "18px",
+                        lineHeight: "26px",
+
+                        textTransform: "none",
+                        fontWeight: "600",
+                        textAlign: "left",
+                      }}
+                    >
+                      Yes, you just have to follow this <span style={{color: "#bdd10a"}}>link.</span>
+                     
                     </Paragraph>
                   </p>
                 </div>
@@ -660,8 +806,7 @@ const Faq = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+     
   );
 };
 
@@ -686,91 +831,3 @@ const Paragraph = styled("h1")({
   textTransform: "uppercase",
   color: `#b9e7d6`,
 });
-const questions = [
-  {
-    id: 1,
-    question: "What Is DeFi?",
-    answer: `DeFi stands for «decentralized finance». The goal is to recreate traditional financial systems,
-      such as banks and exchanges, but with crypto-currencies. The difference is that DeFi applications
-      work without a central service exercising control over the whole system.
-      For example, if we make a comparison between DeFi and traditional finance: in DeFi, you hold
-        your money and you control where your money goes and how it is spent. Whereas in traditional
-        finance, your money is held by the banks and you have to trust them not to mismanage your
-        money, like lending to risky borrowers.`,
-  },
-  {
-    id: 2,
-    question: "What is the SEED$ token?",
-    answer: `The SEED$ token is the currency of the Clover SEED$ game.
-      It is used to buy NFT that will allow you to grow Clovers and harvest more SEED$.`,
-  },
-  {
-    id: 3,
-    question: "Where can I buy SEED$ and where can I create my Clover Land?",
-    answer: `DeFi stands for «decentralized finance». The goal is to recreate traditional financial systems,
-      such as banks and exchanges, but with crypto-currencies. The difference is that DeFi applications
-      work without a central service exercising control over the whole system.
-      For example, if we make a comparison between DeFi and traditional finance: in DeFi, you hold
-      your money and you control where your money goes and how it is spent. Whereas in traditional
-      finance, your money is held by the banks and you have to trust them not to mismanage your
-      money, like lending to risky borrowers.
-      `,
-  },
-  {
-    id: 4,
-    question: "Where can I buy SEED$ and where can I create my Clover Land?",
-    answer: `1/ Buy SEED$ on PancakeSwap or Poocoin.
-      2/ Buy land with 10,000 SEED$ (for 1 CLOVER FIELD) on our web app.
-      3/ Harvest rewards in SEED$ generated by your clovers in your NFT Land
-      4/ Buy more NFT land or swap your tokens.
-      You can also trade your land on https://nftrade.com/
-      `,
-  },
-  {
-    id: 5,
-    question: "How much does a Clover Land costs?",
-    answer: `CloverField: NFT limited to 3,000 copies.
-        Price: 10,000 SEED$ tokens
-        Reward (depending on how luck you are) : 4% / 5% / 6% / 15% per day
-        CloverYard: NFT limited to 30,000 copies.
-        Price: 1,000 SEED$ tokens
-        Reward : 2% / 2.5% / 3% / 6% per day
-        CloverPot: NFT limited to 300,000 copies.
-        Price: 100 SEED$ tokens
-        Reward : 1% / 1.5% / 2% / 4% per day
-        `,
-  },
-  {
-    id: 6,
-    question: "Does Clover have Faucet limits?",
-    answer: `All Staking rewards come from the Staking wallet «0xbED6f3b2e6557Fe370Cb7aEB0C116b695BFf1925». This wallet starts with a sum of 1 Billion SEED$ tokens at the launch of Clover. Then : -it is gradually emptied when the holder who stake claims the reward -It fills up progressively when you minted NFTs (80% of the mint tokens go directly into this wallet). This wallet can therefore be exhausted over time. It is good to know that if this wallet reaches
-        1 Million SEED$ tokens, the faucet will not be able to collect more seeds on your NFT land
-        staked. The game will be over (no more watering, no more seeds rewards).`,
-  },
-  {
-    id: 7,
-    question:
-      "Do I need to keep my computer running for my Clover Lands to be active?",
-    answer: "No, you don’t.",
-  },
-  {
-    id: 8,
-    question: "Where can I buy land?",
-    answer: "Directly on our app or on https://nftrade.com/",
-  },
-  {
-    id: 9,
-    question: "Do I get Royalties when I trade my Clover NFT?",
-    answer:
-      "Yes, the creator will earn 5% royalties when you will trade NFT on Marketplace.",
-  },
-  {
-    id: 10,
-    question: "Do you have big team wallets with SEED$ tokens at launch?",
-    answer: `No, the team didn’t have any SEED$ at launch.The only wallets with SEED$ tokens at launch were:
-      -The «Rewards Wallet» (0xbED6f3b2e6557Fe370Cb7aEB0C116b695BFf1925) which started
-      with 1 billion SEED$ and allows to pay the rewards of the staked NFTs.
-      -The «Safety Wallet» (0x4D19FBd6f06F2cE45A23eABa2A535c1E86eB4c16) which started with
-      1 million SEED$ and and allows the team to fix some bugs (if needed)`,
-  },
-];
