@@ -182,7 +182,8 @@ const Stake = () => {
                     fontWeight: "600",
                   }}
                 >
-                  STACKED
+                  
+                  STAKED
                 </Box>
               </Box>
             </Box>
@@ -255,7 +256,7 @@ const Stake = () => {
                         borderBottomRightRadius: "8px",
                       }}
                     >
-                      {item.stacked}
+                      {item.STAKED}
                     </Box>
                   </Box>
                 </Stack>
@@ -404,22 +405,22 @@ const statsData = [
     title: `CLOVER `,
     subTitle: "FIELD",
     minted: "2500",
-    mintedSlash: "/30,000",
-    stacked: "2250",
+    mintedSlash: "/3000",
+    STAKED: "2250",
   },
   {
     title: "CLOVER",
     subTitle: "YARD",
     minted: "25,000",
     mintedSlash: "/30,000",
-    stacked: "22,500",
+    STAKED: "22,500",
   },
   {
     title: "CLOVER",
     subTitle: "POT",
     minted: "250,000 ",
     mintedSlash: "/300,000",
-    stacked: "225,000",
+    STAKED: "225,000",
   },
 ];
 

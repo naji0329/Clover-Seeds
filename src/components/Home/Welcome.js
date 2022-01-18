@@ -55,7 +55,8 @@ const Welcome = () => {
   return (
     <Box
       sx={{
-        paddingY: "40px",
+        paddingTop: "40px",
+        paddingBottom:"70px"
       }}
     >
       <Title>

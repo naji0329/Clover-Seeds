@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
-import Logo from "../../static/images/web-logo.svg";
+import Logo from "../../static/images/Anim.-Logo-Header-_-Footer-CS(1).gif";
 import WalletIcon from "../../static/images/Picto-wallet.svg";
 import MobileMenu from "./MobileMenu";
 import { Link } from "react-router-dom";
@@ -89,6 +89,7 @@ const Menu = ({ title }) => {
                   border: `2px solid #bcc722`,
                   boxShadow: `0px 0px 7px #bcc722`,
                   cursor: "pointer",
+                  marginTop:"15px"
                 }}
               >
                 <Box

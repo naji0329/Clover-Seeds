@@ -15,7 +15,7 @@ const Mint = () => {
       </Container>
       <Box
         sx={{
-          paddingY: "40px",
+          paddingTop: "140px",
         }}
       >
         <Footer />

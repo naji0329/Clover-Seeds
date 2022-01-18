@@ -2,7 +2,9 @@ import React from "react";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
-
+import { Link } from "react-router-dom";
+import Logo from "../../static/images/Anim.-Logo-Header-_-Footer-CS(1).gif";
+import Grid from "@mui/material/Grid";
 const Title = styled("h1")({
   fontFamily: `Maven Pro, sans-serif`,
   fontStyle: `normal`,
@@ -12,6 +14,7 @@ const Title = styled("h1")({
   textAlign: "center",
   textTransform: "uppercase",
   color: `#FFFFFF`,
+  display: "block",
 });
 const EnsureText = styled("h1")({
   fontFamily: `Maven Pro, sans-serif`,
@@ -29,61 +32,85 @@ const EnsureText = styled("h1")({
 });
 const Footer = () => {
   return (
-    <Box>
+    <Box sx={{
+      position:"absolute",
+      left:"0",
+      right:"0",
+      bottom:"20px"
+    }}>
       <Container maxWidth="xl">
-        <Box>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignSelf: "center",
-            }}
-          >
-            <Title>
-              ©2022 Copyright 
-              <a
-                href="https://clover-seeds.com/"
-                target="_blank"
-                style={{ color: "#fff" }}
-              >
-                 {" "}CLOVER SEEDS.FINANCIAL
-              </a>{" "}
-            </Title>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "flex-end",
-              marginTop: "-24px",
-              "@media (max-width: 1140px)": {
-                marginTop: "20px",
-                justifyContent: "center",
-              },
-            }}
-          >
+        <Grid container rowSpacing={5} columnSpacing={{ xs: 1, sm: 2, md: 5 }}>
+          <Grid item xs={12} sm={6} md={4}>
             <Box
               sx={{
-                backgroundColor: "#0f231a",
-                paddingTop: "5px",
-                paddingBottom: "10px",
-                paddingX: "20px",
+                width: "100%",
+                maxWidth: "200px",
+              }}
+            >
+              <Link to="/">
+                <img src={Logo} alt="" />
+              </Link>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignSelf: "center",
+                  marginTop: "30px",
+                }}
+              >
+                <Title>
+                  ©2022 Copyright
+                  <a
+                    href="https://clover-seeds.com/"
+                    target="_blank"
+                    style={{ color: "#fff" }}
+                  >
+                    {" "}
+                    CLOVER SEEDS.COM
+                  </a>{" "}
+                </Title>
+              </Box>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Box
+              sx={{
                 display: "flex",
+                justifyContent: "center",
                 alignSelf: "center",
-                borderRadius: "5px",
+                marginTop: "20px",
                 "@media (max-width: 1140px)": {
-                  paddingX: "10px",
+                  marginTop: "20px",
                 },
               }}
             >
-              <EnsureText>
-                Ensure you are at{" "}
-                <a href="https://clover-seeds.com/" target="_blank">
-                  https://app.clover-seeds.financial
-                </a>
-              </EnsureText>
+              <Box
+                sx={{
+                  backgroundColor: "#0f231a",
+                  paddingTop: "8px",
+                  paddingBottom: "10px",
+                  paddingX: "20px",
+
+                  borderRadius: "5px",
+                  "@media (max-width: 1140px)": {
+                    paddingX: "10px",
+                  },
+                }}
+              >
+                <EnsureText>
+                  Ensure you are at{" "}
+                  <a href="https://clover-seeds.com/" target="_blank">
+                    https://app.clover-seeds.com
+                  </a>
+                </EnsureText>
+              </Box>
             </Box>
-          </Box>
-        </Box>
+          </Grid>
+        </Grid>
       </Container>
     </Box>
   );

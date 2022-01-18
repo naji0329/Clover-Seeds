@@ -5,7 +5,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import reward from "../../static/images/imageedit_1_5731477485.png";
+import reward from "../../static/images/Mint in progress.gif";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -58,7 +58,7 @@ const MinTitle = styled("h1")({
   color: `#FFFFFF`,
 });
 const LuckyImage = styled("img")({
-  width: "300px",
+  width: "480px",
 });
 const FLowrImage = styled("img")({});
 const ProgresModal = ({
