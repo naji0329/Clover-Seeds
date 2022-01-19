@@ -3,9 +3,18 @@ import Menu from "../Menu";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
+import Grid from "@mui/material/Grid";
 import AnimLogo from "../../static/images/Anim.-Logo-Solo-Main-Image-Site-CS.gif";
+import Percent from "../../static/images/Clover Site Roadmap.svg";
+import DIAMOND from "../../static/images/dimond.svg";
+import PEARL from "../../static/images/Clover PEARL.svg";
+import RUBY from "../../static/images/Clover RUBY.svg";
+import DIAMONDb from "../../static/images/CLOVER DIAMOND.svg";
+import Desert from "../../static/images/Picto logo Dessert Finance.svg";
+import Check from "../../static/images/Picto validé Site CS.svg";
 import Roadmap from "./Roadmap";
 import Faq from "./FAQ";
+import Footer from "../Footer";
 const WhitePaper = () => {
   return (
     <div>
@@ -226,6 +235,121 @@ const WhitePaper = () => {
             Just like a lucky CLOVER has 4 Leaves and is very rare, during the
             minting of your land, you will randomly receive an NFT Land
             generating up to 4, 5, 6, or 15% reward* per day during staking:
+            <Grid
+              container
+              rowSpacing={4}
+              columnSpacing={{ xs: 1, sm: 2, md: 10 }}
+            >
+              <Grid item xs={12} sm={6} md={4}>
+                <img src={Percent} alt="" />
+              </Grid>
+              <Grid item xs={12} sm={6} md={8}>
+                <div style={{ display: "flex", marginTop: "40px" }}>
+                  <div style={{ display: "flex", alignSelf: "center" }}>
+                    <img src={DIAMOND} alt="" width={35} height={35} />
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignSelf: "center",
+                      paddingLeft: "15px",
+                    }}
+                  >
+                    33% chances to mint a 4% reward (with the{" "}
+                    <span
+                      style={{
+                        color: "#5c6869",
+                        padding: "0px 5px",
+                        fontWeight: "700",
+                      }}
+                    >
+                      {" "}
+                      CARBON{" "}
+                    </span>{" "}
+                    LEAF)
+                  </div>
+                </div>
+                <div style={{ display: "flex", marginTop: "10px" }}>
+                  <div style={{ display: "flex", alignSelf: "center" }}>
+                    <img src={PEARL} alt="" width={35} height={35} />
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignSelf: "center",
+                      paddingLeft: "15px",
+                    }}
+                  >
+                    33% chances to mint a 5% reward (with the{" "}
+                    <span
+                      style={{
+                        color: "#88ca71",
+                        padding: "0px 5px",
+                        fontWeight: "700",
+                      }}
+                    >
+                      {" "}
+                      PEARL{" "}
+                    </span>{" "}
+                    LEAF)
+                  </div>
+                </div>
+                <div style={{ display: "flex", marginTop: "10px" }}>
+                  <div style={{ display: "flex", alignSelf: "center" }}>
+                    <img src={RUBY} alt="" width={35} height={35} />
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignSelf: "center",
+                      paddingLeft: "15px",
+                    }}
+                  >
+                    33% chances to mint a 6% reward (with the{" "}
+                    <span
+                      style={{
+                        color: "#f33c23",
+                        padding: "0px 5px",
+                        fontWeight: "700",
+                      }}
+                    >
+                      {" "}
+                      RUBY{" "}
+                    </span>{" "}
+                    LEAF)
+                  </div>
+                </div>
+                <div style={{ display: "flex", marginTop: "10px" }}>
+                  <div style={{ display: "flex", alignSelf: "center" }}>
+                    <img src={DIAMONDb} alt="" width={35} height={35} />
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignSelf: "center",
+                      paddingLeft: "15px",
+                    }}
+                  >
+                    1% chances to mint a 15% reward (with the{" "}
+                    <span
+                      style={{
+                        color: "#fd9a6d",
+                        padding: "0px 5px",
+                        fontWeight: "700",
+                      }}
+                    >
+                      {" "}
+                      DIAMOND{" "}
+                    </span>{" "}
+                    LEAF)
+                  </div>
+                </div>
+              </Grid>
+            </Grid>
+            *These % rewards are valid for the CLOVERFIELD NFT.
+            <br />
+            They are different for the CLOVERFIELD and the CLOVERPOT.
+            <br />
           </Paragraph>
           <Title
             className="gradienttext"
@@ -278,17 +402,7 @@ const WhitePaper = () => {
               textAlign: "left",
             }}
           >
-            <span
-              style={{
-                color: "#bfd10a",
-                fontSize: "24px",
-                fontWeight: "700",
-                paddingBottom: "15px",
-                display: "block",
-              }}
-            >
-              1- Get SEED$ Token
-            </span>
+            <span className="roadmap-title">1- Get SEED$ Token</span>
             <br />
             SEED$ Token Contact:
             <br />
@@ -324,17 +438,7 @@ const WhitePaper = () => {
             <br />
             <br />
             <br />
-            <span
-              style={{
-                color: "#bfd10a",
-                fontSize: "24px",
-                fontWeight: "700",
-                paddingBottom: "15px",
-                display: "block",
-              }}
-            >
-              2- Buy & Stake your land
-            </span>
+            <span className="roadmap-title">2- Buy & Stake your land</span>
             <br />
             Beware, land is rare and limited
             <br />
@@ -369,15 +473,7 @@ const WhitePaper = () => {
             <br />
             <br />
             <br />
-            <span
-              style={{
-                color: "#bfd10a",
-                fontSize: "24px",
-                fontWeight: "700",
-                paddingBottom: "15px",
-                display: "block",
-              }}
-            >
+            <span className="roadmap-title">
               3- Water your land, care for your fields
             </span>
             <br />
@@ -390,17 +486,7 @@ const WhitePaper = () => {
             <br />
             <br />
             <br />
-            <span
-              style={{
-                color: "#bfd10a",
-                fontSize: "24px",
-                fontWeight: "700",
-                paddingBottom: "15px",
-                display: "block",
-              }}
-            >
-              4- HARVEST AND FLES{" "}
-            </span>
+            <span className="roadmap-title">4- HARVEST AND FLES </span>
             <br />
             EAT, SLEEP, WIN... AND REPEAT.
             <br />
@@ -425,7 +511,7 @@ const WhitePaper = () => {
               color: "#b9e7d6",
               fontSize: "17px",
               lineHeight: "26px",
-              paddingBottom: "55px",
+              paddingBottom: "25px",
               textTransform: "none",
               fontWeight: "500",
               textAlign: "center",
@@ -433,6 +519,16 @@ const WhitePaper = () => {
           >
             The contract has been audited by
           </Paragraph>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              paddingBottom: "95px",
+            }}
+          >
+            <img src={Desert} alt="" width={150} />
+          </div>
+
           <Title
             className="gradienttext"
             sx={{
@@ -450,7 +546,8 @@ const WhitePaper = () => {
               color: "#b9e7d6",
               fontSize: "16px",
               lineHeight: "26px",
-              paddingY: "4px",
+              paddingY: "6px",
+              paddingX: "14px",
               textTransform: "none",
               fontWeight: "500",
               textAlign: "center",
@@ -460,7 +557,14 @@ const WhitePaper = () => {
               marginBottom: "40px",
             }}
           >
-            NFT, STACKING, FARMING, LUCKY, BLOCKCHAIN, CLOVER, BINANCE
+            <div style={{ display: "flex" }}>
+              <div style={{ display: "flex", alignSelf: "center" }}>
+                <img src={Check} alt="" width={20} height={20} />
+              </div>
+              <div className="check-content">
+                NFT, STACKING, FARMING, LUCKY, BLOCKCHAIN, CLOVER, BINANCE
+              </div>
+            </div>
           </Paragraph>
           <Title
             className="gradienttext"
@@ -586,6 +690,13 @@ const WhitePaper = () => {
           </div>
         </Box>
       </Container>
+      <Box
+        sx={{
+          paddingY: "40px",
+        }}
+      >
+        <Footer />
+      </Box>
     </div>
   );
 };
@@ -601,6 +712,10 @@ const Title = styled("h1")({
   textAlign: "center",
   textTransform: "uppercase",
   color: `#FFFFFF`,
+  "@media (max-width: 768px)": {
+    fontSize: `42px`,
+  lineHeight: `50px`,
+  },
 });
 const Subtitle = styled("h1")({
   fontFamily: `Maven Pro, sans-serif`,
@@ -612,6 +727,10 @@ const Subtitle = styled("h1")({
   textTransform: "uppercase",
   color: `#b2d349`,
   marginBottom: "20px",
+  "@media (max-width: 768px)": {
+    fontSize: `30px`,
+  lineHeight: `38px`,
+  },
 });
 const AnimLogoImage = styled("img")({
   maxWidth: "200px",
@@ -625,4 +744,8 @@ const Paragraph = styled("h1")({
   textAlign: "center",
   textTransform: "uppercase",
   color: `#b9e7d6`,
+  "@media (max-width: 768px)": {
+    fontSize: `22px`,
+    lineHeight: `30px`,
+  },
 });
