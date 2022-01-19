@@ -30,29 +30,41 @@ const EnsureText = styled("h1")({
     paddingLeft: "5px",
   },
 });
+const Image = styled("img")({
+  width:"100%",
+  marginTop:"5px"
+});
 const Footer = () => {
   return (
-    <Box sx={{
-      position:"absolute",
-      left:"0",
-      right:"0",
-      bottom:"20px",
-    }}>
+    <Box
+      sx={{
+        position: "absolute",
+        left: "0",
+        right: "0",
+        bottom: "20px",
+        "@media (max-width: 910px)": {
+          position: "relative",
+          bottom: "0px",
+        },
+      }}
+    >
       <Container maxWidth="xl">
-        <Grid container rowSpacing={5} columnSpacing={{ xs: 1, sm: 2, md: 5 }}>
-          <Grid item xs={12} sm={6} md={4}>
+        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 5 }}>
+          <Grid item xs={12} md={12} lg={4}>
             <Box
               sx={{
-                width: "100%",
-                maxWidth: "200px",
+                display: "flex",
+                justifyContent: "center",
+                alignSelf:"center"
+                
               }}
             >
               <Link to="/">
-                <img src={Logo} alt="" />
+                <Image src={Logo} alt="" />
               </Link>
             </Box>
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} md={6} lg={4}>
             <Box>
               <Box
                 sx={{
@@ -76,7 +88,7 @@ const Footer = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} md={6} lg={4}>
             <Box
               sx={{
                 display: "flex",
