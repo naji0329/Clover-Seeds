@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 import Footer from "../components/Footer";
 import Menu from "../components/Menu";
 import SeedDaap from "../static/images/image-112.jpg";
 const PreSaleMint = () => {
+  const [nftVal, setNftVal] = useState(1);
+  const nftValueHandler = (id) => {
+    setNftVal(id)
+  }
   return (
     <div>
       <Menu />
@@ -23,7 +27,7 @@ const PreSaleMint = () => {
             color: `#B9D43B`,
           }}
         >
-          PRESALE <span style={{color:"#FFFFFF"}}>MINT</span>
+          PRESALE <span style={{ color: "#FFFFFF" }}>MINT</span>
         </Box>
       </Box>
       <Box
@@ -74,20 +78,52 @@ const PreSaleMint = () => {
             paddingBottom: "20px",
           }}
         >
-          {/* <Box>
-            <input placeholder="1" type="number" className="input-number" />
-          </Box> */}
+          <Box
+            sx={{
+              display: "flex",
+              alignSelf: "center",
+              marginRight:"10px"
+            }}
+          >
+            {nftbtn.map((item, index) => {
+              return (
+                <Box
+                  key={index}
+                  sx={{
+                    fontSize: "20px",
+                    color: nftVal === item.btnId ? "#FFFFFF" : "#6D9D89",
+                    fontWeight: "600",
+                    paddingY: "12px",
+                    paddingX: "14px",
+                    marginX: "3px",
+                    borderRadius:"4px",
+                    backgroundColor: nftVal === item.btnId ? "#35A760" : "#023B17",
+                    cursor:"pointer"
+                  }}
+                  onClick={() => nftValueHandler(item.btnId)}
+                >
+                  {item.btnId}
+                </Box>
+              );
+            })}
+          </Box>
           <Button title="MINT CLOVERYARD" color="#00a65a" />
         </Box>
         <Box>
-          <Title sx={{
-              textTransform:"none"
-          }}>Whitelist Offer: 0.15 BNB / Mint </Title>
+          <Title
+            sx={{
+              textTransform: "none",
+            }}
+          >
+            Whitelist Offer: {nftVal * 0.15} BNB / Mint{" "}
+          </Title>
         </Box>
       </Box>
-      <Box sx={{
-          paddingTop:"80px"
-      }}>
+      <Box
+        sx={{
+          paddingTop: "80px",
+        }}
+      >
         <Footer />
       </Box>
     </div>
@@ -152,15 +188,12 @@ const Title = styled("h1")({
   paddingBottom: "10px",
   color: `#FFFFFF`,
 });
-const Input = styled("input")({
-  fontFamily: `Maven Pro, sans-serif`,
-  fontStyle: `normal`,
-  fontWeight: `700`,
-  fontSize: `18px`,
-  lineHeight: `24px`,
-  textAlign: "center",
-  textTransform: "uppercase",
-  color: `#FFFFFF`,
-  maxWidth: "100px",
-  height: "50px",
-});
+
+const nftbtn = [
+  {
+    btnId: 1,
+  },
+  {
+    btnId: 2,
+  },
+];
