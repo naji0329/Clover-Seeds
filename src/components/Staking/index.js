@@ -9,7 +9,7 @@ const Staking = () => {
   return (
     <div>
       <Menu title="Home" />
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
         <Header />
       </Container>
       <Box

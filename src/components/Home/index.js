@@ -11,7 +11,7 @@ const Home = () => {
     <Box>
       <Menu />
       <Box>
-        <Container maxWidth="lg">
+        <Container maxWidth="xl">
           <Welcome />
           <Box
             sx={{

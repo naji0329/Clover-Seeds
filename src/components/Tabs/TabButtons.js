@@ -1,6 +1,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
+import Timer from "../../Timer";
 const TabButtons = ({ buttons, changeTab, activeTab }) => {
   console.log(activeTab == "STACK - 6", "activeTabactiveTab");
   return (
@@ -21,7 +22,7 @@ const TabButtons = ({ buttons, changeTab, activeTab }) => {
           sx={{
             display: "flex",
             justifyContent: "center",
-            "@media (max-width: 560px)": {
+            "@media (max-width: 1170px)": {
               flexDirection: "column",
             },
           }}
@@ -29,7 +30,7 @@ const TabButtons = ({ buttons, changeTab, activeTab }) => {
           <Box
             sx={{
               display: "flex",
-              "@media (max-width: 560px)": {
+              "@media (max-width: 1170px)": {
                 maxWidth: "300px",
                 marginX: "auto",
                 marginBottom: "30px",
@@ -54,7 +55,17 @@ const TabButtons = ({ buttons, changeTab, activeTab }) => {
           )}
         </Box>
       </Box>
-      <Box sx={{}}></Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          "@media (max-width: 890px)": {
+            marginTop:"40px"
+          },
+        }}
+      >
+        <Timer />
+      </Box>
     </Box>
   );
 };
@@ -70,7 +81,7 @@ const MainTitle = styled("h1")({
   textTransform: "uppercase",
   color: `#FFFFFF`,
 
-  "@media (max-width: 768px)": {
+  "@media (max-width: 960px)": {
     fontSize: `32px`,
     lineHeight: `40px`,
     paddingBottom: "30px",

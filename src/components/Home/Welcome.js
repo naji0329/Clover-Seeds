@@ -57,6 +57,7 @@ const Welcome = () => {
       sx={{
         paddingTop: "40px",
         paddingBottom: "70px",
+        paddingX:"30px"
       }}
     >
       <Title>

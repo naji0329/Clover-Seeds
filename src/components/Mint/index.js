@@ -9,7 +9,7 @@ const Mint = () => {
   return (
     <div>
       <Menu title="Home"/>
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
         <Header />
         <Cards />
       </Container>

@@ -53,7 +53,7 @@ const ButtonText = styled("span")({
 const Header = () => {
   return (
     <Box>
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
         <MainTitle>MY NFT</MainTitle>
         <Box
           sx={{
