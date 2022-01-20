@@ -3,7 +3,6 @@ import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 import Timer from "../../Timer";
 const TabButtons = ({ buttons, changeTab, activeTab }) => {
-  console.log(activeTab == "STACK - 6", "activeTabactiveTab");
   return (
     <Box
       sx={{
@@ -48,7 +47,7 @@ const TabButtons = ({ buttons, changeTab, activeTab }) => {
               );
             })}
           </Box>
-          {activeTab == "STACK - 6" ? (
+          {activeTab == `STAKE - 6` ? (
             <LandsButton title="SELECT ALL LANDS" />
           ) : (
             <LandsButton title="STAKE SELECTED NFT" />
@@ -60,7 +59,7 @@ const TabButtons = ({ buttons, changeTab, activeTab }) => {
           display: "flex",
           justifyContent: "center",
           "@media (max-width: 890px)": {
-            marginTop:"40px"
+            marginTop: "40px",
           },
         }}
       >

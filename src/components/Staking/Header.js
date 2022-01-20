@@ -30,10 +30,10 @@ const Header = () => {
           }}
         >
           <Tabs >
-            <Tab label="STAKE - 6">
+            <Tab label={`STAKE - 6`}>
               <Stake />
             </Tab>
-            <Tab label="UNSTAKE - 0">
+            <Tab label={`UNSTAKE - 0`}>
               <UnStake />
             </Tab>
           </Tabs>
