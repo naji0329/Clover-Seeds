@@ -143,126 +143,135 @@ const UnStake = () => {
         <Grid item sx={12} sm={6} md={4} lg={3}>
           <Box
             sx={{
-              backgroundColor: "#10241b",
-              paddingX: "4px",
-              paddingY: "14px",
+              display: "flex",
+              justifyContent: "center",
             }}
           >
-            <StatTitle>Clover Stats</StatTitle>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "flex-end",
-                paddingBottom: "10px",
-              }}
-            >
+            <Box>
               <Box
                 sx={{
-                  display: "flex",
+                  backgroundColor: "#10241b",
+                  paddingX: "4px",
+                  paddingY: "14px",
                 }}
               >
+                <StatTitle>Clover Stats</StatTitle>
                 <Box
                   sx={{
-                    color: "#ffffff",
-                    paddingX: "12px",
-                    borderRight: "2px solid #c1d117",
-                    textTransform: "uppercase",
-                    fontSize: "16px",
-                    fontWeight: "600",
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    paddingBottom: "10px",
                   }}
                 >
-                  MINTED
-                </Box>
-                <Box
-                  sx={{
-                    color: "#ffffff",
-                    paddingX: "12px",
-                    textTransform: "uppercase",
-                    fontSize: "16px",
-                    fontWeight: "600",
-                  }}
-                >
-                  STAKED
-                </Box>
-              </Box>
-            </Box>
-            {statsData.map((item, index) => {
-              return (
-                <Stack
-                  direction="row"
-                  spacing={1}
-                  sx={{
-                    paddingX: "6px",
-                    marginY: "7px",
-                  }}
-                  key={index}
-                >
-                  <Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                    }}
+                  >
                     <Box
                       sx={{
-                        backgroundColor: "#c1d117",
-                        color: "#0d1f19",
-                        paddingY: "5px",
-                        paddingX: "10px",
+                        color: "#ffffff",
+                        paddingX: "12px",
+                        borderRight: "2px solid #c1d117",
                         textTransform: "uppercase",
                         fontSize: "16px",
-                        fontWeight: "700",
-                        borderTopLeftRadius: "8px",
-                        borderBottomLeftRadius: "8px",
+                        fontWeight: "600",
                       }}
                     >
-                      {item.title}
-                      <br />
-                      {item.subTitle}
+                      MINTED
                     </Box>
-                  </Box>
-                  <Box>
                     <Box
                       sx={{
-                        backgroundColor: "#c1d117",
-                        color: "#0d1f19",
-                        paddingX: "7px",
-                        paddingY: "7px",
+                        color: "#ffffff",
+                        paddingX: "12px",
                         textTransform: "uppercase",
-                        fontSize: "14px",
+                        fontSize: "16px",
                         fontWeight: "600",
-                        textAlign: "center",
-                        maxWidth: "100px",
-                        minWidth: "80px",
-                        "& > span": {
-                          color: `#FFFFFF`,
-                        },
                       }}
                     >
-                      {item.minted}<br />
-                      <span>{item.mintedSlash}</span>
+                      STAKED
                     </Box>
                   </Box>
-                  <Box>
-                    <Box
+                </Box>
+                {statsData.map((item, index) => {
+                  return (
+                    <Stack
+                      direction="row"
+                      spacing={1}
                       sx={{
-                        backgroundColor: "#c1d117",
-                        color: "#fff",
-                        minWidth: "80px",
-                        maxWidth: "120px",
-                        paddingX: "7px",
-                        paddingY: "15px",
-                        textTransform: "uppercase",
-                        fontSize: "14px",
-                        fontWeight: "600",
-                        textAlign: "center",
-                        borderTopRightRadius: "8px",
-                        borderBottomRightRadius: "8px",
+                        paddingX: "6px",
+                        marginY: "7px",
                       }}
+                      key={index}
                     >
-                      {item.STAKED}
-                    </Box>
-                  </Box>
-                </Stack>
-              );
-            })}
+                      <Box>
+                        <Box
+                          sx={{
+                            backgroundColor: "#c1d117",
+                            color: "#0d1f19",
+                            paddingY: "5px",
+                            paddingX: "10px",
+                            textTransform: "uppercase",
+                            fontSize: "16px",
+                            fontWeight: "700",
+                            borderTopLeftRadius: "8px",
+                            borderBottomLeftRadius: "8px",
+                          }}
+                        >
+                          {item.title}
+                          <br />
+                          {item.subTitle}
+                        </Box>
+                      </Box>
+                      <Box>
+                        <Box
+                          sx={{
+                            backgroundColor: "#c1d117",
+                            color: "#0d1f19",
+                            paddingX: "7px",
+                            paddingY: "7px",
+                            textTransform: "uppercase",
+                            fontSize: "14px",
+                            fontWeight: "600",
+                            textAlign: "center",
+                            maxWidth: "100px",
+                            minWidth: "80px",
+                            "& > span": {
+                              color: `#FFFFFF`,
+                            },
+                          }}
+                        >
+                          {item.minted}
+                          <br />
+                          <span>{item.mintedSlash}</span>
+                        </Box>
+                      </Box>
+                      <Box>
+                        <Box
+                          sx={{
+                            backgroundColor: "#c1d117",
+                            color: "#fff",
+                            minWidth: "80px",
+                            maxWidth: "120px",
+                            paddingX: "7px",
+                            paddingY: "15px",
+                            textTransform: "uppercase",
+                            fontSize: "14px",
+                            fontWeight: "600",
+                            textAlign: "center",
+                            borderTopRightRadius: "8px",
+                            borderBottomRightRadius: "8px",
+                          }}
+                        >
+                          {item.STAKED}
+                        </Box>
+                      </Box>
+                    </Stack>
+                  );
+                })}
+              </Box>
+            </Box>
           </Box>
-        
         </Grid>
       </Grid>
     </Box>
@@ -386,5 +395,3 @@ const statsData = [
     STAKED: "225,000",
   },
 ];
-
-

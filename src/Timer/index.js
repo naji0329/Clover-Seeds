@@ -14,6 +14,7 @@ function Timer() {
   return (
     <div>
       <Box>
+        <Title>WATERING TIMER LIMIT</Title>
         <TimerStyled
           seconds={seconds}
           minutes={minutes}
@@ -26,3 +27,11 @@ function Timer() {
 }
 
 export default Timer;
+
+const Title = styled("h3")({
+  fontSize: "12px",
+  fontWeight: "700",
+  color: "#FFFFFF",
+  textAlign: "center",
+  paddingBottom:"4px"
+});
