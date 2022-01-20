@@ -607,6 +607,33 @@ const WhitePaper = () => {
           <div>
             <Roadmap />
           </div>
+          <Title
+            className="gradienttext"
+            sx={{
+              color: "#c9e5d8",
+              fontSize: "36px",
+              lineHeight: "44px",
+              paddingBottom: "20px",
+              textTransform: "none",
+            }}
+          >
+            Contribute and give feedback
+          </Title>
+          <Paragraph
+            sx={{
+              color: "#b9e7d6",
+              fontSize: "17px",
+              lineHeight: "26px",
+              paddingBottom: "55px",
+              textTransform: "none",
+              fontWeight: "500",
+              textAlign: "left",
+            }}
+          >
+            Clover SEED$ is constantly looking for feedback to improve our
+            concept and user experience. Users who would like to contribute are
+            welcome to contact us on support@clover-seeds.financial.
+          </Paragraph>
           <div>
             <Faq />
           </div>
@@ -714,7 +741,7 @@ const Title = styled("h1")({
   color: `#FFFFFF`,
   "@media (max-width: 768px)": {
     fontSize: `42px`,
-  lineHeight: `50px`,
+    lineHeight: `50px`,
   },
 });
 const Subtitle = styled("h1")({
@@ -729,7 +756,7 @@ const Subtitle = styled("h1")({
   marginBottom: "20px",
   "@media (max-width: 768px)": {
     fontSize: `30px`,
-  lineHeight: `38px`,
+    lineHeight: `38px`,
   },
 });
 const AnimLogoImage = styled("img")({

@@ -28,7 +28,7 @@ const Roadmap = () => {
                   },
                 }}
               >
-                <span className="roadmap-title">1- Get SEED$ Token</span>
+                <span className="roadmap-title">Build and launch website</span>
                 <br />
                 Build and launch initial website
                 <br />
