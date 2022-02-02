@@ -413,7 +413,7 @@ const WhitePaper = () => {
             Supply: <span style={{ color: "#bfd10a" }}>100B</span>
             <br />
             Price at launch:{" "}
-            <span style={{ color: "#bfd10a" }}>$0.005/SEED$</span>
+            <span style={{ color: "#bfd10a" }}>$0.05/SEED$</span>
             <br />
             Market Cap at launch:{" "}
             <span style={{ color: "#bfd10a" }}>105 BNB</span>

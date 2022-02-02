@@ -28,7 +28,7 @@ const Roadmap = () => {
                   },
                 }}
               >
-                <span className="roadmap-title">Build and launch website</span>
+                <span className="roadmap-title">- Build and launch website</span>
                 <br />
                 Build and launch initial website
                 <br />
@@ -212,6 +212,10 @@ const Roadmap = () => {
                 <br />
                 Grow market cap
                 <br /> <br />
+                <br />
+                <span className="roadmap-title">
+                  - Development of CLOVER SEED$ mobile app
+                </span>
                 <br />
                 <span className="roadmap-title">
                   - Beta Release of CLOVER SEED$ mobile app
